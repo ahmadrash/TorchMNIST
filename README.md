@@ -1,15 +1,14 @@
 # TorchMNIST
-MNIST Experiments
 
-Introduction:
+## Introduction:
 
 The exercise entailed classifying the MNIST dataset using the demo code provided for Torch. It was my first time using Torch and I found it easier to run and manupulate the my initial experience with Theano. We are asked to compare the performance, specfically accuracy versus training epochs, for the three algorithms in the demo code namely Convolutional Nerual Networks (convnets), a 2-layer fully connected Perceptron (mlp) and Logisitic Regression. Then we are asked to make architectural changes to the convnet and plot the performance difference.
 
-The Data Set:
+## The Data Set:
 
 MNIST is a dataset of handwritten digits. The version provided to us for the exercise consisted of 32X32 images for each digit. The training set consists of 60,000 images and the test set is 10,000 images. In the code there is the option to use the reduced data set i.e., 2000 training images and 1000 test images or the full data set. I started with the reduced data set to make an initial comparison as it took much less time and eventually moved to the full data set when making changes to the convnet.
 
-List of Experiments on the smaller set:
+## List of Experiments on the smaller set:
 
 1.	My intial run was to just let the default convet in the code run so that I had some idea of the performance benchmark and a reasonable value for the number of epochs to run the code for. The optimzation algorithm was Stochastic Gradient Descent and the learning rate was 0.05. I did not modify the the learning algorithm or learning rate for any of the experiments. The optimzation criterion for all experiments is negative log likelihood. On the output layer for all the experiments a LogSoftMax function is applied. The network architecture is as follow:
 	 input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (10) -> output
@@ -83,7 +82,8 @@ List of Experiments on the smaller set:
 
 
 	The test accuracy is around 85.75 percent.
-List of Experiments on the Full Data Set:
+
+## List of Experiments on the Full Data Set:
 
 1.	There were two things I modified with the default convnet for this experiment. I increased the batch size to 100 and added dropout at the input of the two fully connected layers.  Smaller batches tend to reduce overfitting and increase performance but each training iteration takes more time so the conventional wisdom is to select the smallest batch size that your machine can handle effeciently in terms of time. Dropout is a simply method to regularize the network to improve performance and reduce overfitting. I did not train the dropout probability and instead used the value of 0.5
 	The network architecture is as follows:
@@ -379,7 +379,7 @@ List of Experiments on the Full Data Set:
 
 	The accuracy achieved in 92.17 percent
 
-Discussion:
+## Discussion:
 
 We observe that on the full data set if we constrain ourselves to 30 epochs with a batch size of 1000, the best performance is achieved for the convnet with ReLU units, dropout and 2x2 maxpooling after both convolution layers. There are other parameters and configurations that I could have modified. One of the most important is the learning rate and idea of adding momentum to it. 
 
