@@ -2,7 +2,7 @@
 
 ## Introduction:
 
-The exercise entailed classifying the MNIST dataset using the demo code provided for Torch. It was my first time using Torch and I found it easier to run and manupulate the my initial experience with Theano. We are asked to compare the performance, specfically accuracy versus training epochs, for the three algorithms in the demo code namely Convolutional Nerual Networks (convnets), a 2-layer fully connected Perceptron (mlp) and Logisitic Regression. Then we are asked to make architectural changes to the convnet and plot the performance difference.
+The exercise entailed classifying the MNIST dataset using the demo code provided for Torch. It was my first time using Torch and I found it easier to grasp than my initial experience with Theano. I tried to compare the performance, specfically accuracy versus training epochs, for the three algorithms in the demo code namely Convolutional Nerual Networks (convnets), a 2-layer fully connected Perceptron (mlp) and Logisitic Regression. Then I made architectural changes to the convnet and plotted the performance difference.
 
 ## The Data Set:
 
